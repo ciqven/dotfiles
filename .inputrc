@@ -1,0 +1,4 @@
+$include /etc/inputrc
+
+# Proper ctrl+backspace in bash
+"\C-h": backward-kill-word
