@@ -1,0 +1,27 @@
+#!/bin/bash
+
+######### Cintiq
+
+STY="Wacom Cintiq 13HD Pen stylus"
+PAD="Wacom Cintiq 13HD Pad pad"
+ERA="Wacom Cintiq 13HD Pen eraser"
+
+### Stylus
+# Scrolling sensitivity (less = more sensitive)
+xsetwacom set "$STY" PanScrollThreshold 850
+
+xsetwacom set "$STY" Button 1 "1"
+xsetwacom set "$STY" Button 2 key "shift"
+xsetwacom set "$STY" Button 3 "pan"
+
+### Eraser
+xsetwacom set "$ERA" PanScrollThreshold 850 
+
+xsetwacom set "$ERA" Button 1 "1"
+xsetwacom set "$ERA" Button 3 "pan"
+
+### Tablet
+
+xsetwacom set "$PAD" Button 9 key "f" 
+xsetwacom set "$PAD" Button 8 "2"
+

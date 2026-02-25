@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Enable extglop
+shopt -s extglob
+
+# Go to dir if passed
+[ -d "$1" ] && cd "$1"
+
+# Run mpv
+mpv !(*.jpg|*.png|*.bmp|*.cue|*.tiff|*.webp|*.txt)
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+/usr/bin/steam
+
+# Clean up symlinks in home
+rm /home/ciqven/.steampath
+rm /home/ciqven/.steampid
