@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Uses trim on all filesystems listed in /etc/fstab that support it (SSD devices)
+fstrim --all
