@@ -1,0 +1,61 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1556,
+       "width": 1911,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "i3: Layout saving in i3 — Mozilla Firefox",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Firefox$",
+       // "instance": "^Navigator$",
+       // "machine": "^qan$",
+       // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\—\\ Mozilla\\ Firefox$",
+          "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // tabbed split container with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1536,
+               "width": 1911,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "i3-save-tree --workspace 1 > .config/i3/layout-ff-term.json",
+            "percent": null,
+            "swallows": [
+               {
+                  "class": "^kitty$"
+               // "instance": "^kitty$",
+               // "machine": "^qan$",
+               // "title": "^i3\\-save\\-tree\\ \\-\\-workspace\\ 1\\ \\>\\ \\.config\\/i3\\/layout\\-ff\\-term\\.json$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
