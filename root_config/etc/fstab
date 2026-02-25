@@ -1,0 +1,11 @@
+UUID=3d4ce240-4b9b-4dd4-99b9-1824b52bda9b none swap defaults 0 0
+UUID=eb9aed18-555f-4fa6-9a46-84d7a46594e5 / ext4 defaults 0 1
+UUID=19BB-BC2B /boot/efi vfat defaults 0 2
+UUID=b3c93ddb-37d5-4827-bcc9-e869bced9272 /storage ext4 defaults 0 2
+tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
+
+//192.168.0.73/anime /media/nas/anime cifs credentials=/etc/wktknas.credentials,gid=1000,uid=1000 0 0
+//192.168.0.73/books /media/nas/books cifs credentials=/etc/wktknas.credentials,gid=1000,uid=1000 0 0
+//192.168.0.73/audio /media/nas/audio cifs credentials=/etc/wktknas.credentials,gid=1000,uid=1000 0 0
+//192.168.0.73/storage /media/nas/storage cifs credentials=/etc/wktknas.credentials,gid=1000,uid=1000 0 0
+//192.168.0.73/video-old /media/nas/video cifs credentials=/etc/wktknas.credentials,gid=1000,uid=1000 0 0
