@@ -1,0 +1,19 @@
+[mgr]
+show_hidden = true
+title_format = ":{cwd}"
+image_filter = "nearest"
+
+[opener]
+mpv = [
+  { run = "mpv %s", block = true },
+]
+
+edit = [
+  { run = "nano %s", block = true },
+]
+
+[open]
+prepend_rules = [
+  { mime = "audio/*", use = "mpv" },
+  { mime = "video/*", use = "mpv" },
+]

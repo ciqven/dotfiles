@@ -1,0 +1,111 @@
+[app]
+overall = { bg = "#332222" }
+
+[mgr]
+cwd = { fg = "#efb26c" }
+find_keyword = { fg = "#ef7d6c", bold = true }
+
+marker_copied = { bg = "#50b16d" }
+marker_cut = { bg = "#e36778" }
+#marker_marked = { bg = "#000000" }
+marker_selected = { bg = "#efb26c" }
+
+count_copied = { bg = "#50b16d", fg = "#2a1b1b", bold = true }
+count_cut = { bg = "#e36778", fg = "#2a1b1b", bold = true }
+count_selected = { bg = "#efb26c", fg = "#2a1b1b", bold = true }
+
+border_style = { fg = "#863b2f" }
+
+[indicator]
+parent = { bg = "#863b2f", fg = "#2a1b1b", bold = true }
+current = { bg = "#efb26c", fg = "#2a1b1b", bold = true } # by default this has different colors for file/dir, not sure how to replicate
+preview = { bg = "#863b2f", fg = "#2a1b1b", bold = true }
+padding = { open = "🭅", close = "🭡" }
+
+[tabs]
+active = { bg = "#c25e50", fg = "#2a1b1b", bold = true }
+inactive = { bg = "#2a1b1b", fg = "#c25e50", bold = true }
+sep_inner = { open = "🭅", close = "🭡" }
+sep_outer = { open = "█", close = "🭡" }
+
+[status]
+sep_left = { open = "█", close = "🭡" }
+sep_right = { open = "🭅", close = "█" }
+overall = { bg = "#4b1b22", fg = "#efb26c" }
+
+perm_type = { fg = "#948add" }
+perm_read = { fg = "#efb26c" }
+perm_write = { fg = "#e36778" }
+perm_exec = { fg = "#b2d75c" }
+perm_sep = { fg = "#986e3f" }
+
+progress_label  = { bold = true, fg = "#efb26c" }
+progress_normal = { fg = "#6d2a20", bg = "#2a1b1b" }
+progress_error  = { fg = "#2a1b1b", bg = "#e36778" }
+
+[filetype]
+rules = [
+    # Media
+    { mime = "image/webp", fg = "#7f51a7" },
+    { mime = "image/*", fg = "#a374cb" },
+    { mime = "{audio,video}/*", fg = "#c95b8d" },
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#50b16d" },
+    # Docs
+    { mime = "application/{pdf,doc,rtf,xls,docx,xlsx}", fg = "#5da6b9" },
+
+
+    # Empty file
+	{ mime = "inode/empty", fg = "#b4b4b4" },
+    # Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#666666" },
+	# Orphan symbolic links
+	{ url = "*", is = "orphan", bg = "#666666" },
+    # Executables
+	{ url = "*", is = "exec"  , fg = "#b2d75c" },
+	# Dummy file
+	{ url = "*", is = "dummy", bg = "#e36778" },
+	{ url = "*/", is = "dummy", bg = "#e36778" },
+	# All directories
+	{ url = "*/", fg = "#ef7d6c" }
+]
+
+[icon]
+# Icons mapped to unicode codepoints, see https://www.nerdfonts.com/cheat-sheet
+# See also for inspiration: https://github.com/sxyazi/yazi/blob/97d0c6bb23df413f4add8b888071233c912c49a3/yazi-config/preset/theme-dark.toml
+globs = []
+dirs = [
+    { name = "ciqven", text = "🦊", fg = "#986e3f" },
+	{ name = ".config", text = "", fg = "#986e3f" },
+	{ name = ".git", text = "", fg = "#986e3f" },
+	{ name = ".github", text = "", fg = "#986e3f" },
+	{ name = ".npm", text = "", fg = "#986e3f" },
+	{ name = "Desktop", text = "", fg = "#efb26c" },
+	{ name = "Development", text = "", fg = "#efb26c" },
+    { name = "Projects", text = "", fg = "#efb26c" },
+    { name = "Programs", text = "", fg = "#efb26c" },
+	{ name = "Documents", text = "󰈙", fg = "#efb26c" },
+	{ name = "Downloads", text = "󰇚", fg = "#efb26c" },
+    { name = "Games", text = "󰊖", fg = "#efb26c" },
+	{ name = "Library", text = "", fg = "#efb26c" },
+	{ name = "Movies", text = "", fg = "#efb26c" },
+	{ name = "Music", text = "", fg = "#efb26c" },
+	{ name = "Pictures", text = "", fg = "#efb26c" },
+	{ name = "Public", text = "", fg = "#efb26c" },
+	{ name = "Videos", text = "", fg = "#efb26c" },
+]
+conds = [
+    { if = "orphan", text = "" },
+	{ if = "link", text = "" },
+	{ if = "block", text = "" },
+	{ if = "char", text = "" },
+	{ if = "fifo", text = "" },
+	{ if = "sock", text = "" },
+	{ if = "sticky", text = "" },
+	{ if = "dummy", text = "" },
+
+    { if = "hidden & dir", text = "", fg = "#986e3f" },
+    { if = "dir", text = "", fg = "#efb26c" },
+    # Normal files
+    { if = "!(dir | link)", text = "", fg = "#efb26c" },
+]
