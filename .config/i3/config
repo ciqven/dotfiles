@@ -46,6 +46,12 @@ bindsym $mod+Return exec i3-sensible-terminal
 # tyeirem-input
 bindsym $mod+t exec --no-startup-id /home/ciqven/Programs/tyeirem/tyeirem-input
 
+# whisker mouse helper
+bindsym $mod+KP_Enter exec "bash -ilc whisker"
+bindsym $mod+KP_Delete exec "bash -ilc 'whisker -a'"
+# Numpad keys with numlock enabled need an additional mod2. See "https://github.com/i3/i3/issues/2558#issuecomment-260149625"
+bindsym $mod+mod2+KP_Decimal exec "bash -ilc 'whisker -a'"
+
 #############
 ### AUDIO ###
 #############
